@@ -9,4 +9,4 @@ myobj = {'name': 'It was the best of times, it was the worst of times, it wasthe
 
 x = requests.post(url, json = myobj)
 
-st.text_area('Retour', value=x.text)
+st.write('Retour', x.text)
