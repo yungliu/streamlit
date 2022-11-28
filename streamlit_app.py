@@ -1,4 +1,4 @@
 import streamlit as st
 st.title('Bienvenue')
-st.text_area(textinput1, value="Mon test sur Streamlit")
+txtInput1=st.text_area('textinput1', value="Mon test sur Streamlit")
 click = st.button("Resume")
