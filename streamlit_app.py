@@ -4,7 +4,7 @@ st.title('Bienvenue')
 txtInput1=st.text_area('textinput1', value="Mon test sur Streamlit")
 click = st.button("Resume")
 
-url = 'https://azfpowerapps.azurewebsites.net/api/httptriggerpowerapps'
+url = 'https://<xxxxxxxx<w'
 myobj = {'name':txtInput1}
 st.write('envoi',myobj)
 
