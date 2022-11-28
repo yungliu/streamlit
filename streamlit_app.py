@@ -1,4 +1,4 @@
 import streamlit as st
 st.title('Bienvenue')
-st.text_area(label, value="", height=None, max_chars=None, key=None, help=None, on_change=None, args=None, kwargs=None, *, placeholder=None, disabled=False, label_visibility="visible")
+st.text_area(textinput1, value="Mon test sur Streamlit", height=None, max_chars=None, key=None, help=None, on_change=None) 
 click = st.button("Resume")
