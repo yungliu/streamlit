@@ -10,4 +10,6 @@ st.write('envoi',myobj)
 
 x = requests.post(url, json = myobj)
 
-st.write('Retour', x)
+st.write('Reponse HTTP ', x)
+
+st.write('Le Résume ', x.text)
