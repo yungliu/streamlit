@@ -1,5 +1,5 @@
 import streamlit as st
-import reuests
+import requests
 st.title('Bienvenue')
 txtInput1=st.text_area('textinput1', value="Mon test sur Streamlit")
 click = st.button("Resume")
