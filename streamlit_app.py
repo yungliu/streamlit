@@ -4,7 +4,7 @@ import openai
 st.title('Bienvenue')
 txtInput1=st.text_area('textinput1', value="Mon test sur Streamlit")
 txtInputAPPKEY = st.text_input('appKey',value="Appkey")
-click = st.button("Resume")
+if st.button("Action"):
   openai.api_key=txtInputAPPKEY
   response = openai.Completion.create(
   model="code-davinci-002",
