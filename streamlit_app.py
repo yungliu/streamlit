@@ -16,6 +16,6 @@ if st.button("Action"):
    presence_penalty=0.0,
    stop=["###"]
   )
-  st.write('Le Retour ', response)
+  st.write('Le Retour ', response.choices[0].text)
 
  
