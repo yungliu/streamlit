@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 
 st.title('Bienvenue')
-txtInput1=str.text_area('textinput1', value="Mon test sur Streamlit")
+txtInput1=st.text_area('textinput1', value="Mon test sur Streamlit")
 txtInputAPPKEY = st.text_input('appKey',value="Appkey")
 click = st.button("Resume")
 
