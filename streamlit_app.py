@@ -3,7 +3,7 @@ import openai
 
 st.title('Bienvenue')
 txtInput1=str.text_area('textinput1', value="Mon test sur Streamlit")
-txtInputAPPKEY = st.text_input('appKey',value='Appkey')
+txtInputAPPKEY = st.text_input('appKey',value="Appkey"
 click = st.button("Resume")
 
 url = 'https://<xxxxxxxx<w'
