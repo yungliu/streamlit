@@ -16,6 +16,6 @@ if st.button("Action"):
    presence_penalty=0.0,
    stop=["###"]
   )
-  st.write('Le Résume ', response.text)
+  st.write('Le Retour ', response)
 
  
