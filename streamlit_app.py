@@ -6,11 +6,14 @@ import openai
 st.title('Bienvenue - Service OpenAI - by YLI')
 
 with st.sidebar:
-  st.title('Modèles:')
-  st.radio('Modèles',['Ada : 1 024 dimensions'
-,'Babbage : 2 048 dimensions'
-,'Curie : 4 096 dimensions'
-,'Davinci : 12 288 dimensions'])
+  st.title('Paramétrages:')
+  choix_modeles=st.radio('Modèle',['Ada'
+,'Babbage'
+,'Curie'
+,'Davinci'])
+if choix_modeles == 'Ada':
+  st.selectbox('Mod',['Ada1','Ada2'])
+
 
 
 txtInput1=st.text_area('Code à Analyser', value="##### Fix bugs in the below function\n \n### Buggy Python\nimport Random\na = random.randint(1,12)\nb = random.randint(1,12)\nfor i in range(10):\n    question = \"What is \"+a+\" x \"+b+\"? \"\n    answer = input(question)\n    if answer = a*b\n        print (Well done!)\n    else:\n        print(\"No.\")\n    \n### Fixed Python",height=300)
