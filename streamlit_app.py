@@ -1,7 +1,13 @@
 import streamlit as st
 import openai
 
+
+
 st.title('Bienvenue - Service OpenAI - by YLI')
+
+with st.sidebar:
+  st.title('Demo')
+
 txtInput1=st.text_area('Code à Analyser', value="##### Fix bugs in the below function\n \n### Buggy Python\nimport Random\na = random.randint(1,12)\nb = random.randint(1,12)\nfor i in range(10):\n    question = \"What is \"+a+\" x \"+b+\"? \"\n    answer = input(question)\n    if answer = a*b\n        print (Well done!)\n    else:\n        print(\"No.\")\n    \n### Fixed Python",height=300)
 txtInputAPPKEY = st.text_input('appKey',value="Appkey")
 if st.button("Action"):
