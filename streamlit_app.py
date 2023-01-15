@@ -11,9 +11,14 @@ with st.sidebar:
 ,'Babbage'
 ,'Curie'
 ,'Davinci'])
-if choix_modeles == 'Ada':
-  st.selectbox('Mod',['Ada1','Ada2'])
-
+  if choix_modeles == 'Ada':
+    st.selectbox('Mod',['Ada1','Ada2'])
+  if choix_modeles == 'Babbage':
+    st.selectbox('Mod',['Babbage','Babbage'])
+  if choix_modeles == 'Curie':
+    st.selectbox('Mod',['Curie','Curie'])
+  if choix_modeles == 'Davinci':
+    st.selectbox('Mod',['Davinci','Davinci'])
 
 
 txtInput1=st.text_area('Code à Analyser', value="##### Fix bugs in the below function\n \n### Buggy Python\nimport Random\na = random.randint(1,12)\nb = random.randint(1,12)\nfor i in range(10):\n    question = \"What is \"+a+\" x \"+b+\"? \"\n    answer = input(question)\n    if answer = a*b\n        print (Well done!)\n    else:\n        print(\"No.\")\n    \n### Fixed Python",height=300)
