@@ -51,7 +51,7 @@ if st.button("Action"):
   openai.api_key=txtInputAPPKEY
 
 openai.api_type = "azure"
-openai.api_base = "https://stsopenai.openai.azure.com/"
+openai.api_base = "https://tsi-openai.openai.azure.com/"
 openai.api_version = "2022-12-01"
 #openai.api_key = os.getenv("OPENAI_API_KEY")
 
