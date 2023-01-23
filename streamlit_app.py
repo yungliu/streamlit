@@ -34,7 +34,7 @@ with st.sidebar:
   vpres_penalty=st.slider('Presence penalty :', value=0.0, min_value=0.0, max_value=1.0, step=.1)
 
 
-txtInput1=st.text_area('Code à Analyser', value="### Fix bugs in the below function\n \n### Buggy Python\nimport Random\na = random.randint(1,12)\nb = random.randint(1,12)\nfor i in range(10):\n    question = \"What is \"+a+\" x \"+b+\"? \"\n    answer = input(question)\n    if answer = a*b\n        print (Well done!)\n    else:\n        print(\"No.\")\n    \n### Fixed Python",height=300)
+=st.text_area('Code à Analyser', value="### Postgres SQL tables, with their properties:\n#\n# Employee(id, name, department_id)\n# Department(id, name, address)\n# Salary_Payments(id, employee_id, amount, date)\n#\n### A query to list the names of the departments which employed more than 10 employees in the last 3 months\n\nSELECT",height=300)
 txtInputAPPKEY = st.text_input('appKey',value="Appkey")
 openai.api_type = "azure"
 openai.api_base = "https://tsi-openai.openai.azure.com/"
@@ -60,7 +60,7 @@ if st.button("Action"):
 
   response = openai.Completion.create(
     engine=modele_a_charger,
-    prompt="### Postgres SQL tables, with their properties:\n#\n# Employee(id, name, department_id)\n# Department(id, name, address)\n# Salary_Payments(id, employee_id, amount, date)\n#\n### A query to list the names of the departments which employed more than 10 employees in the last 3 months\n\nSELECT",
+    prompt=txtInput1,
     temperature=0,
     max_tokens=150,
     top_p=1,
