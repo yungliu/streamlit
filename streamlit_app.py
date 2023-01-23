@@ -47,6 +47,6 @@ if st.button("Action"):
     frequency_penalty=vfreq_penalty,
     presence_penalty=vpres_penalty,
     stop=["#",";"])
-  st.code('Le Retour :', response.choices[0].text)
+  st.code(response.choices[0].text)
 
  
