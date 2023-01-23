@@ -2,8 +2,8 @@ import streamlit as st
 import openai
 
 ##Parametrage
-openai.api_base = "https://stsopenai.openai.azure.com/"
-openai.api_version = "2022-12-01"
+#openai.api_base = "https://stsopenai.openai.azure.com/"
+#openai.api_version = "2022-12-01"
 
 
 st.title('Bienvenue - Service OpenAI - Technologie du SI by YLI/PDU')
@@ -48,12 +48,13 @@ if st.button("Action"):
   ##   presence_penalty=vpres_penalty,
   ##   stop=["###"]
   ##  )
-  openai.api_key=txtInputAPPKEY
+#  openai.api_key=txtInputAPPKEY
 
 openai.api_type = "azure"
 openai.api_base = "https://tsi-openai.openai.azure.com/"
 openai.api_version = "2022-12-01"
-#openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key ="d7d2408f7f2144499cb314b66ad59f6f" 
+#os.getenv("OPENAI_API_KEY")
 
 response = openai.Completion.create(
   engine="de-code-davinci-002",
