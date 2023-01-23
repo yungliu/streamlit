@@ -43,20 +43,6 @@ openai.api_key =txtInputAPPKEY
 
 
 if st.button("Action"):
-  ##  openai.api_key=txtInputAPPKEY
-  ##  response = openai.Completion.create(
-  ##  model="de-text-davinci-002",
-  ##  prompt=txtInput1,
-  ##   temperature=vtemperature,
-  ##   max_tokens=vtoken,
-  ##   top_p=vtop,
-  ##   frequency_penalty=vfreq_penalty,
-  ##   presence_penalty=vpres_penalty,
-  ##   stop=["###"]
-  ##  )
-#  openai.api_key=txtInputAPPKEY
-
-
   response = openai.Completion.create(
     engine=modele_a_charger,
     prompt=txtInput1,
