@@ -51,7 +51,7 @@ if st.button("Action"):
   openai.api_key=txtInputAPPKEY
   response = openai.Completion.create(
     engine="code-davinci-002",
-    prompt="",
+    prompt=txtInput1,
     temperature=0.84,
     max_tokens=910,
     top_p=0.5,
