@@ -39,7 +39,8 @@ txtInputAPPKEY = st.text_input('appKey',value="Appkey")
 openai.api_type = "azure"
 openai.api_base = "https://tsi-openai.openai.azure.com/"
 openai.api_version = "2022-12-01"
-openai.api_key ="d7d2408f7f2144499cb314b66ad59f6f" 
+openai.api_key =txtInputAPPKEY
+#"d7d2408f7f2144499cb314b66ad59f6f" 
 #os.getenv("OPENAI_API_KEY")
 
 if st.button("Action"):
