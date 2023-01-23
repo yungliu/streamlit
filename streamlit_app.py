@@ -59,7 +59,7 @@ if st.button("Action"):
 
 
   response = openai.Completion.create(
-    engine="de-code-davinci-002",
+    engine=modele_a_charger,
     prompt="### Postgres SQL tables, with their properties:\n#\n# Employee(id, name, department_id)\n# Department(id, name, address)\n# Salary_Payments(id, employee_id, amount, date)\n#\n### A query to list the names of the departments which employed more than 10 employees in the last 3 months\n\nSELECT",
     temperature=0,
     max_tokens=150,
