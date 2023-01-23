@@ -34,7 +34,7 @@ with st.sidebar:
   vpres_penalty=st.slider('Presence penalty :', value=0.0, min_value=0.0, max_value=1.0, step=.1)
 
 
-=st.text_area('Code à Analyser', value="### Postgres SQL tables, with their properties:\n#\n# Employee(id, name, department_id)\n# Department(id, name, address)\n# Salary_Payments(id, employee_id, amount, date)\n#\n### A query to list the names of the departments which employed more than 10 employees in the last 3 months\n\nSELECT",height=300)
+txtInput1=st.text_area('Code à Analyser', value="### Postgres SQL tables, with their properties:\n#\n# Employee(id, name, department_id)\n# Department(id, name, address)\n# Salary_Payments(id, employee_id, amount, date)\n#\n### A query to list the names of the departments which employed more than 10 employees in the last 3 months\n\nSELECT",height=300)
 txtInputAPPKEY = st.text_input('appKey',value="Appkey")
 openai.api_type = "azure"
 openai.api_base = "https://tsi-openai.openai.azure.com/"
