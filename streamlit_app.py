@@ -50,7 +50,7 @@ if st.button("Action"):
   ##  )
   openai.api_key=txtInputAPPKEY
   response = openai.Completion.create(
-    engine="de-text-davinci-002",
+    engine="sts-cushman001",
     prompt="",
     temperature=0.84,
     max_tokens=910,
