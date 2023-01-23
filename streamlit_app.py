@@ -20,7 +20,7 @@ with st.sidebar:
   if choix_modeles == 'Davinci':
     st.selectbox('Mod',['Code','Text'])
   vtemperature = st.slider('Temperature :', value=0.7,min_value=0., max_value=1., step=.1)
-  vtoken= st.slider('Token :', value=0.7,min_value=0, max_value=2048, step=1)
+  vtoken= st.slider('Token :', value=0,min_value=0, max_value=2048, step=1)
   vtop=st.slider('Top_p :', value=1.0,min_value=0.0, max_value=1.0, step=.1)
   vfreq_penalty=st.slider('frequence penalty :', value=0.0,min_value=0., max_value=1., step=.1)
   vpres_penalty=st.slider('Presence penalty :', value=0.0, min_value=0, max_value=1, step=.1)
