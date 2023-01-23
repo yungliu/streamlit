@@ -1,9 +1,12 @@
 import streamlit as st
 import openai
 
+##Parametrage
+openai.api_base = "https://tsi-openai.openai.azure.com/"
+openai.api_version = "2022-12-01"
 
 
-st.title('Bienvenue - Service OpenAI - STS by YLI/PDU')
+st.title('Bienvenue - Service OpenAI - Technologie du SI by YLI/PDU')
 
 with st.sidebar:
   st.title('Paramétrages:')
@@ -20,9 +23,9 @@ with st.sidebar:
   if choix_modeles == 'Davinci':
     modele_option=st.selectbox('Mod',['Code','Text'])
     if (modele_option=='Code'):
-      modele_a_charger='code-davinci-002'
+      modele_a_charger='de-code-davinci-002'
     if (modele_option=='Text'):
-      modele_a_charger='text-davinci-002'
+      modele_a_charger='de-text-davinci-002'
 
   vtemperature = st.slider('Temperature :', value=0.7,min_value=0., max_value=1., step=.1)
   vtoken= st.slider('Token :', value=190,min_value=0, max_value=2048, step=1)
