@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 
 ##Parametrage
-openai.api_base = "https://tsi-openai.openai.azure.com/"
+openai.api_base = "https://stsopenai.openai.azure.com/"
 openai.api_version = "2022-12-01"
 
 
