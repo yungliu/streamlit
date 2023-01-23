@@ -50,14 +50,15 @@ if st.button("Action"):
   ##  )
   openai.api_key=txtInputAPPKEY
   response = openai.Completion.create(
-    engine="code-davinci-002",
-    prompt=txtInput1,
-    temperature=0.84,
-    max_tokens=910,
-    top_p=0.5,
-    frequency_penalty=0,
-    presence_penalty=0,
-    stop=None)
+   model="code-davinci-002",
+   prompt=txtInput1,
+   temperature=0,
+   max_tokens=182,
+   top_p=1.0,
+   frequency_penalty=0.0,
+   presence_penalty=0.0,
+   stop=["###"]
+  )
 
   st.write('Le Retour ', response.choices[0].text)
 
