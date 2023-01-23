@@ -19,11 +19,11 @@ with st.sidebar:
     st.selectbox('Mod',['Curie','Curie'])
   if choix_modeles == 'Davinci':
     st.selectbox('Mod',['Code','Text'])
-  vtemperature = st.slider('Temperature :', min_value=0, max_value=1, step=.1)
-  vtoken= st.slider('Token :', min_value=0, max_value=2048, step=1)
-  vtop=st.slider('Top_p :', min_value=0, max_value=1, step=.1)
-  vfreq_penalty=st.slider('frequence penalty :', min_value=0, max_value=1, step=.1)
-  vpres_penalty=st.slider('Presence penalty :', min_value=0, max_value=1, step=.1)
+  vtemperature = st.slider('Temperature :', value=0.7,min_value=0., max_value=1., step=.1)
+  vtoken= st.slider('Token :', value=0.7,min_value=0, max_value=2048, step=1)
+  vtop=st.slider('Top_p :', value=1.0,min_value=0.0, max_value=1.0, step=.1)
+  vfreq_penalty=st.slider('frequence penalty :', value=0.0,min_value=0., max_value=1., step=.1)
+  vpres_penalty=st.slider('Presence penalty :', value=0.0, min_value=0, max_value=1, step=.1)
 
 
 txtInput1=st.text_area('Code à Analyser', value="YOUYOU: Fix bugs in the below function\n \n### Buggy Python\nimport Random\na = random.randint(1,12)\nb = random.randint(1,12)\nfor i in range(10):\n    question = \"What is \"+a+\" x \"+b+\"? \"\n    answer = input(question)\n    if answer = a*b\n        print (Well done!)\n    else:\n        print(\"No.\")\n    \n### Fixed Python",height=300)
