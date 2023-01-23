@@ -3,20 +3,20 @@ import openai
 
 
 
-st.title('Bienvenue - Service OpenAI - by YLI')
+st.title('Bienvenue - Service OpenAI - STS by YLI/PDU')
 
 with st.sidebar:
   st.title('Paramétrages:')
-  choix_modeles=st.radio('Modèle',['Ada'
+  choix_modeles=st.radio('Modèles',['Ada'
 ,'Babbage'
 ,'Curie'
 ,'Davinci'])
   if choix_modeles == 'Ada':
-    st.selectbox('Mod',['Ada1','Ada2'])
+    st.selectbox('Mod',['NOT IMPLEMENTED','NOT IMPLEMENTED'])
   if choix_modeles == 'Babbage':
-    st.selectbox('Mod',['Babbage','Babbage'])
+    st.selectbox('Mod',['NOT IMPLEMENTED','NOT IMPLEMENTED'])
   if choix_modeles == 'Curie':
-    st.selectbox('Mod',['Curie','Curie'])
+    st.selectbox('Mod',['NOT IMPLEMENTED','NOT IMPLEMENTED'])
   if choix_modeles == 'Davinci':
     st.selectbox('Mod',['Code','Text'])
   vtemperature = st.slider('Temperature :', value=0.7,min_value=0., max_value=1., step=.1)
@@ -38,7 +38,7 @@ if st.button("Action"):
    top_p=1.0,
    frequency_penalty=0.0,
    presence_penalty=0.0,
-   stop=["YOUYOU:"]
+   stop=["YOUYOU:","###"]
   )
   st.write('Le Retour ', response.choices[0].text)
 
