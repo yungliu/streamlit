@@ -23,9 +23,9 @@ with st.sidebar:
   if choix_modeles == 'Davinci':
     modele_option=st.selectbox('Mod',['Code','Text'])
     if (modele_option=='Code'):
-      modele_a_charger='de-code-davinci-002'
+      modele_a_charger="de-code-davinci-002"
     if (modele_option=='Text'):
-      modele_a_charger='de-text-davinci-002'
+      modele_a_charger="de-text-davinci-002"
 
   vtemperature = st.slider('Temperature :', value=0.7,min_value=0., max_value=1., step=.1)
   vtoken= st.slider('Token :', value=190,min_value=0, max_value=2048, step=1)
@@ -34,19 +34,19 @@ with st.sidebar:
   vpres_penalty=st.slider('Presence penalty :', value=0.0, min_value=0.0, max_value=1.0, step=.1)
 
 
-txtInput1=st.text_area('Code à Analyser', value="YOUYOU: Fix bugs in the below function\n \n### Buggy Python\nimport Random\na = random.randint(1,12)\nb = random.randint(1,12)\nfor i in range(10):\n    question = \"What is \"+a+\" x \"+b+\"? \"\n    answer = input(question)\n    if answer = a*b\n        print (Well done!)\n    else:\n        print(\"No.\")\n    \n### Fixed Python",height=300)
+txtInput1=st.text_area('Code à Analyser', value="### Fix bugs in the below function\n \n### Buggy Python\nimport Random\na = random.randint(1,12)\nb = random.randint(1,12)\nfor i in range(10):\n    question = \"What is \"+a+\" x \"+b+\"? \"\n    answer = input(question)\n    if answer = a*b\n        print (Well done!)\n    else:\n        print(\"No.\")\n    \n### Fixed Python",height=300)
 txtInputAPPKEY = st.text_input('appKey',value="Appkey")
 if st.button("Action"):
   openai.api_key=txtInputAPPKEY
   response = openai.Completion.create(
-  model=modele_a_charger,
+  model="de-text-davinci-002",
   prompt=txtInput1,
    temperature=vtemperature,
    max_tokens=vtoken,
    top_p=vtop,
    frequency_penalty=vfreq_penalty,
    presence_penalty=vpres_penalty,
-   stop=["YOUYOU:","###"]
+   stop=["###"]
   )
   st.write('Le Retour ', response.choices[0].text)
 
