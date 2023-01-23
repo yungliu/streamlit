@@ -1,19 +1,14 @@
 import streamlit as st
 import openai
 
-##Parametrage
-#openai.api_base = "https://stsopenai.openai.azure.com/"
-#openai.api_version = "2022-12-01"
+
 
 
 st.title('Bienvenue - Service OpenAI - Technologie du SI by YLI/PDU')
 
 with st.sidebar:
   st.title('Paramétrages:')
-  choix_modeles=st.radio('Modèles',['Ada'
-,'Babbage'
-,'Curie'
-,'Davinci'])
+  choix_modeles=st.radio('Modèles',['Davinci'])
   if choix_modeles == 'Ada':
     modele_option=st.selectbox('Mod',['NOT IMPLEMENTED','NOT IMPLEMENTED'])
   if choix_modeles == 'Babbage':
