@@ -19,6 +19,12 @@ with st.sidebar:
     st.selectbox('Mod',['Curie','Curie'])
   if choix_modeles == 'Davinci':
     st.selectbox('Mod',['Code','Text'])
+  vtemperature = st.slider('Temperature :', 0, 1, .1)
+  vtoken= st.slider('Token :', 0, 2048, 1)
+  vtop=st.slider('Top_p :', 0, 1, .1)
+  vfreq_penalty=st.slider('Top_p :', 0, 1, .1)
+  vpres_penalty=st.slider('Top_p :', 0, 1, .1)
+  
 
 
 txtInput1=st.text_area('Code à Analyser', value="YOUYOU: Fix bugs in the below function\n \n### Buggy Python\nimport Random\na = random.randint(1,12)\nb = random.randint(1,12)\nfor i in range(10):\n    question = \"What is \"+a+\" x \"+b+\"? \"\n    answer = input(question)\n    if answer = a*b\n        print (Well done!)\n    else:\n        print(\"No.\")\n    \n### Fixed Python",height=300)
