@@ -64,6 +64,6 @@ response = openai.Completion.create(
   frequency_penalty=0,
   presence_penalty=0,
   stop=["#",";"])
-  st.write('Le Retour ', response.choices[0].text)
+st.write('Le Retour ', response.choices[0].text)
 
  
