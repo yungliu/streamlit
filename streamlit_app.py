@@ -12,15 +12,20 @@ with st.sidebar:
 ,'Curie'
 ,'Davinci'])
   if choix_modeles == 'Ada':
-    st.selectbox('Mod',['NOT IMPLEMENTED','NOT IMPLEMENTED'])
+    modele_option=st.selectbox('Mod',['NOT IMPLEMENTED','NOT IMPLEMENTED'])
   if choix_modeles == 'Babbage':
-    st.selectbox('Mod',['NOT IMPLEMENTED','NOT IMPLEMENTED'])
+    modele_option=st.selectbox('Mod',['NOT IMPLEMENTED','NOT IMPLEMENTED'])
   if choix_modeles == 'Curie':
-    st.selectbox('Mod',['NOT IMPLEMENTED','NOT IMPLEMENTED'])
+    modele_option=st.selectbox('Mod',['NOT IMPLEMENTED','NOT IMPLEMENTED'])
   if choix_modeles == 'Davinci':
-    st.selectbox('Mod',['Code','Text'])
+    modele_option=st.selectbox('Mod',['Code','Text'])
+    if (modele_option=='Code'):
+      modele_a_charger='code-davinci-002'
+    if (modele_option=='Text'):
+      modele_a_charger='text-davinci-002'
+
   vtemperature = st.slider('Temperature :', value=0.7,min_value=0., max_value=1., step=.1)
-  vtoken= st.slider('Token :', value=0,min_value=0, max_value=2048, step=1)
+  vtoken= st.slider('Token :', value=190,min_value=0, max_value=2048, step=1)
   vtop=st.slider('Top_p :', value=1.0,min_value=0.0, max_value=1.0, step=.1)
   vfreq_penalty=st.slider('frequence penalty :', value=0.0,min_value=0.0, max_value=1.0, step=.1)
   vpres_penalty=st.slider('Presence penalty :', value=0.0, min_value=0.0, max_value=1.0, step=.1)
@@ -31,13 +36,13 @@ txtInputAPPKEY = st.text_input('appKey',value="Appkey")
 if st.button("Action"):
   openai.api_key=txtInputAPPKEY
   response = openai.Completion.create(
-  model="code-davinci-002",
+  model=modele_a_charger,
   prompt=txtInput1,
-   temperature=0,
-   max_tokens=182,
-   top_p=1.0,
-   frequency_penalty=0.0,
-   presence_penalty=0.0,
+   temperature=vtemperature,
+   max_tokens=vtoken,
+   top_p=vtop,
+   frequency_penalty=vfreq_penalty,
+   presence_penalty=vpres_penalty,
    stop=["YOUYOU:","###"]
   )
   st.write('Le Retour ', response.choices[0].text)
