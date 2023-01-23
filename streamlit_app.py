@@ -37,17 +37,28 @@ with st.sidebar:
 txtInput1=st.text_area('Code à Analyser', value="### Fix bugs in the below function\n \n### Buggy Python\nimport Random\na = random.randint(1,12)\nb = random.randint(1,12)\nfor i in range(10):\n    question = \"What is \"+a+\" x \"+b+\"? \"\n    answer = input(question)\n    if answer = a*b\n        print (Well done!)\n    else:\n        print(\"No.\")\n    \n### Fixed Python",height=300)
 txtInputAPPKEY = st.text_input('appKey',value="Appkey")
 if st.button("Action"):
+  ##  openai.api_key=txtInputAPPKEY
+  ##  response = openai.Completion.create(
+  ##  model="de-text-davinci-002",
+  ##  prompt=txtInput1,
+  ##   temperature=vtemperature,
+  ##   max_tokens=vtoken,
+  ##   top_p=vtop,
+  ##   frequency_penalty=vfreq_penalty,
+  ##   presence_penalty=vpres_penalty,
+  ##   stop=["###"]
+  ##  )
   openai.api_key=txtInputAPPKEY
   response = openai.Completion.create(
-  model="de-text-davinci-002",
-  prompt=txtInput1,
-   temperature=vtemperature,
-   max_tokens=vtoken,
-   top_p=vtop,
-   frequency_penalty=vfreq_penalty,
-   presence_penalty=vpres_penalty,
-   stop=["###"]
-  )
+    engine="de-text-davinci-002",
+    prompt="",
+    temperature=0.84,
+    max_tokens=910,
+    top_p=0.5,
+    frequency_penalty=0,
+    presence_penalty=0,
+    stop=None)
+
   st.write('Le Retour ', response.choices[0].text)
 
  
