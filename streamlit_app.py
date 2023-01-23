@@ -40,8 +40,7 @@ openai.api_type = "azure"
 openai.api_base = "https://tsi-openai.openai.azure.com/"
 openai.api_version = "2022-12-01"
 openai.api_key =txtInputAPPKEY
-#"d7d2408f7f2144499cb314b66ad59f6f" 
-#os.getenv("OPENAI_API_KEY")
+
 
 if st.button("Action"):
   ##  openai.api_key=txtInputAPPKEY
@@ -61,11 +60,11 @@ if st.button("Action"):
   response = openai.Completion.create(
     engine=modele_a_charger,
     prompt=txtInput1,
-    temperature=0,
-    max_tokens=150,
-    top_p=1,
-    frequency_penalty=0,
-    presence_penalty=0,
+    temperature=vtemperature,
+    max_tokens=vtoken,
+    top_p=vtop,
+    frequency_penalty=vfreq_penalty,
+    presence_penalty=vpres_penalty,
     stop=["#",";"])
   st.write('Le Retour ', response.choices[0].text)
 
