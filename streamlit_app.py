@@ -46,7 +46,7 @@ if st.button("Action"):
     top_p=vtop,
     frequency_penalty=vfreq_penalty,
     presence_penalty=vpres_penalty,
-    stop=["#",";"])
+    stop=["YOUYOU:"])
   st.code(response.choices[0].text)
 
  
