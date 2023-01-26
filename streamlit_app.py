@@ -48,5 +48,9 @@ if st.button("Action"):
     presence_penalty=vpres_penalty,
     stop=["YOUYOU:"])
   st.code(response.choices[0].text)
+  with st.expander("Debug:",expanded=False):
+    st.code(response)
+
+
 
  
